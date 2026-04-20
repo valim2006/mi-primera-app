@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca Juniors - Trivia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <header>
+            <h1 class="title">BOCA JUNIORS</h1>
+            <p class="subtitle">Trivia Verdadero o Falso</p>
+        </header>
+
+        <main class="quiz-container" id="quiz">
+            <div class="score-display">Puntaje: <span id="score">0</span>/<span id="total-questions">5</span></div>
+            <div class="question-card">
+                <h2 id="question-text">Cargando pregunta...</h2>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-true" id="btn-true" onclick="checkAnswer(true)">Verdadero</button>
+                <button class="btn btn-false" id="btn-false" onclick="checkAnswer(false)">Falso</button>
+            </div>
+        </main>
+
+        <div class="result-container hidden" id="result">
+            <h2 id="result-title" class="result-title"></h2>
+            <p id="result-message" class="result-message"></p>
+            <p class="final-score">Tu puntaje final es: <span id="final-score-value"></span></p>
+            <button class="btn btn-restart" onclick="restartQuiz()">Jugar de Nuevo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
